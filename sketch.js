@@ -17,7 +17,7 @@ function preload()
 }
 function setup()
 {
-  createCanvas(1000, 600);    //this is us4d to create canvas on the browser 
+  createCanvas(1000, 600);    //this is used to create canvas on the browser 
 
   //creating background 
   bg = createSprite(580,300);
@@ -30,7 +30,7 @@ function setup()
   ironMan.scale=0.3;
   ironMan.addImage(ironManImg);
   
-  //creating grounds(both at top and bottm)
+  //creating grounds(both at top and bottom)
   ground1=createSprite(500,600,1000,10);
   ground1.visible=false;
   ground2=createSprite(500,0,1000,10);
@@ -71,7 +71,7 @@ function draw()
   if(keyDown("right")){
     ironMan.x=ironMan.x+5;
   }
-  generateSones();    //calling the function to generate stones
+  generateSones();      //calling the function to generate stones
 
     //make Ironman collide with stones
     for(var i=0;i<(stoneGroup).length;i++){
@@ -91,7 +91,7 @@ function draw()
         temp=null;
       }
     }
-  generateSpikes()    //calling the function to generate spikes
+  generateSpikes()     //calling the function to generate spikes
 
     //Ironman is colliding with the spikes
     for(var i=0;i<(spikeGroup).length;i++){
@@ -106,6 +106,7 @@ function draw()
   text("Total Score : "+score, 600,70);      //displaying the score
 }
 function generateSones()
+//this fuction is used to generate stones
 {
   if(frameCount%70===0){
     console.log(frameCount);
@@ -118,6 +119,7 @@ function generateSones()
   }
 }
 function generateDiamonds()
+//this fuction is used to generate diamonds
 {
   if(frameCount%70===0){
     console.log(frameCount);
@@ -131,6 +133,7 @@ function generateDiamonds()
 }
 
 function generateSpikes()
+//this fuction is used to generate spikes
 {
   if(frameCount%70===0){
     console.log(frameCount);
